@@ -30,6 +30,7 @@
 			}
 			function registerBooks($_book){
 				$this->book[] = $_book;
+				$this->isRegistered();
 			}
 			
 			function isRegistered(){

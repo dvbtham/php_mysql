@@ -31,6 +31,7 @@
 			}
 			function loanBook($_book){
 				$this->book[] = $_book;
+				$this->isBorrowed();
 			}
 			function numberOfBook(){
 				return count($this->book);
