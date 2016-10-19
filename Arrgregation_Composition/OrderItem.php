@@ -1,4 +1,13 @@
-<?php 
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title></title>
+	<link rel="stylesheet" href="">
+</head>
+<body>
+	<?php 
 
 		class OrderItem
 		{
@@ -18,7 +27,7 @@
 					{
 						$this->product = $_product;
 						$_product->setProductInStock($_quantity);
-						$this->Display();
+						//$this->Display();
 					}
 					else
 					{
@@ -26,8 +35,11 @@
 					}
 					
 			}
+			function getTotalOrderItem(){
+				return ($this->price) * ($this->quantity);
+			}
 			function Display(){
-				echo "<br>Order item id: ".$this->orderItemId;
+				echo "<br>----------<br>Order item id: ".$this->orderItemId;
 				echo "<br>Quantity: ".$this->quantity;
 				echo "<br>Price: ".$this->price;
 				echo "<br>----------------";
@@ -36,3 +48,5 @@
 		}
 
  ?>
+</body>
+</html>
